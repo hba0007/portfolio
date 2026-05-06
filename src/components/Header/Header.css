@@ -39,7 +39,9 @@ nav ul a:hover {
   color: #C1440E;
 }
 
-nav ul a.active {
-  color: #C1440E;
+.logo {
+  font-size: 18px;
   font-weight: 500;
+  color: #C1440E;
+  letter-spacing: -0.5px;
 }

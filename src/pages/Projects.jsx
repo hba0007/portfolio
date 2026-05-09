@@ -5,21 +5,21 @@ const projects = [
   {
     id: 1,
     title: '3D Portfolio',
-    description: 'Interactive portfolio with Three.js animations and particle effects.',
+    description: 'Interactive portfolio with Three.js particle animations and modern UI design.',
     tech: ['React', 'Three.js', 'CSS'],
     link: '#'
   },
   {
     id: 2,
     title: 'P3 Cars Story',
-    description: 'A web application about cars, built as a team project.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
-    link: '#'
+    description: 'Full-stack web app about the life cycle of cars. Features car comparisons, sports cars, tuning details, security info and a live chat. Built as a team project at Wild Code School.',
+    tech: ['React', 'Node.js', 'MySQL', 'CSS'],
+    link: 'https://github.com/WildCodeSchool-2024-02/JS-RemoteFR-Gridception-P3-Cars-Story'
   },
   {
     id: 3,
-    title: 'Coming Soon',
-    description: 'A new AI-driven project currently in development.',
+    title: 'Coming Soon — AI Project',
+    description: 'A new AI-driven project currently in development. Exploring machine learning and AI content generation.',
     tech: ['Python', 'AI', 'React'],
     link: '#'
   }
@@ -33,7 +33,7 @@ const Projects = () => {
         <h1>My <span>Projects</span></h1>
         <div className="projects-list">
           {projects.map((project, index) => (
-            <a href={project.link} className="project-row" key={project.id}>
+            <a href={project.link} className="project-row" key={project.id} target="_blank" rel="noopener noreferrer">
               <span className="project-num">{String(index + 1).padStart(2, '0')}</span>
               <div className="project-body">
                 <h3>{project.title}</h3>

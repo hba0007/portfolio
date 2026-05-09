@@ -4,23 +4,23 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'Portfolio 3D',
-    description: 'Portfolio interactif avec animations Three.js',
+    title: '3D Portfolio',
+    description: 'Interactive portfolio with Three.js animations and particle effects.',
     tech: ['React', 'Three.js', 'CSS'],
     link: '#'
   },
   {
     id: 2,
-    title: 'App de recettes',
-    description: 'Application de recettes de cuisine avec Node.js',
-    tech: ['Next.js', 'Node.js', 'MongoDB'],
+    title: 'P3 Cars Story',
+    description: 'A web application about cars, built as a team project.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
     link: '#'
   },
   {
     id: 3,
-    title: 'Dashboard',
-    description: 'Dashboard analytique responsive',
-    tech: ['React', 'Chart.js', 'API'],
+    title: 'Coming Soon',
+    description: 'A new AI-driven project currently in development.',
+    tech: ['Python', 'AI', 'React'],
     link: '#'
   }
 ];
@@ -29,19 +29,23 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="projects-container">
-        <h1>Mes <span>Projets</span></h1>
-        <div className="projects-grid">
-          {projects.map(project => (
-            <div className="project-card" key={project.id}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="tech-stack">
-                {project.tech.map((t, i) => (
-                  <span key={i} className="tech-badge">{t}</span>
-                ))}
+        <div className="section-label">Work</div>
+        <h1>My <span>Projects</span></h1>
+        <div className="projects-list">
+          {projects.map((project, index) => (
+            <a href={project.link} className="project-row" key={project.id}>
+              <span className="project-num">{String(index + 1).padStart(2, '0')}</span>
+              <div className="project-body">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tech-stack">
+                  {project.tech.map((t, i) => (
+                    <span key={i} className="tech-badge">{t}</span>
+                  ))}
+                </div>
               </div>
-              <a href={project.link} className="project-link">Voir le projet →</a>
-            </div>
+              <span className="project-arrow">↗</span>
+            </a>
           ))}
         </div>
       </div>

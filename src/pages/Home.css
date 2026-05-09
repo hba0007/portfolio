@@ -5,46 +5,118 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #0f0f0f;
+  background: var(--bg);
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(193, 68, 14, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.home::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(193, 68, 14, 0.2));
+  pointer-events: none;
 }
 
 .home-content {
   position: relative;
   z-index: 1;
-  text-align: center;
-  color: white;
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.home-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-label::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--red);
+  flex-shrink: 0;
 }
 
 .home-content h1 {
-  font-size: 3.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 300;
-  margin-bottom: 1rem;
-  letter-spacing: -1px;
+  line-height: 1.0;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
 }
 
 .home-content h1 span {
-  color: #C1440E;
-  font-weight: 500;
+  color: var(--red);
+  font-weight: 400;
 }
 
 .home-content p {
-  font-size: 1.2rem;
-  color: #888;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 420px;
+  margin-bottom: 3rem;
+  font-weight: 300;
 }
 
 .btn {
-  display: inline-block;
-  padding: 12px 32px;
-  border: 1px solid #C1440E;
-  color: #C1440E;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 14px 36px;
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #C1440E;
+  background: var(--red);
   color: white;
+}
+
+.home-scroll {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--text-ghost);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: #222;
 }

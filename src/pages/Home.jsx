@@ -7,10 +7,12 @@ const Home = () => {
     <div className="home">
       <ThreeScene />
       <div className="home-content">
-        <h1>Bonjour, je suis <span>Macbook</span></h1>
-        <p>Développeur web passionné par la création d'applications modernes.</p>
-        <a href="/projects" className="btn">Voir mes projets</a>
+        <div className="home-label">IT Technician & Web Developer</div>
+        <h1>Hello, I am<br /><span>Hamid Bouaicha</span></h1>
+        <p>Passionate about technology and AI, I create modern digital experiences at the intersection of design and innovation.</p>
+        <a href="/projects" className="btn">View my projects</a>
       </div>
+      <div className="home-scroll">Scroll</div>
     </div>
   );
 };

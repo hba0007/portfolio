@@ -1,18 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const location = useLocation();
   return (
     <header>
       <nav>
-        <span className="logo">life:me</span>
+        <Link to="/" className="logo">life:me</Link>
         <ul>
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/about">À propos</Link></li>
-          <li><Link to="/projects">Projets</Link></li>
-          <li><Link to="/skills">Compétences</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+          <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
+          <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link></li>
+          <li><Link to="/skills" className={location.pathname === '/skills' ? 'active' : ''}>Skills</Link></li>
+          <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
         </ul>
       </nav>
     </header>

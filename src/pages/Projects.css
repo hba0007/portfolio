@@ -1,7 +1,7 @@
 .projects {
   min-height: 100vh;
-  background: #0f0f0f;
-  padding: 80px 20px;
+  background: var(--bg);
+  padding: 120px 3rem;
 }
 
 .projects-container {
@@ -10,71 +10,108 @@
 }
 
 .projects-container h1 {
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 300;
-  color: white;
-  margin-bottom: 3rem;
+  color: var(--text-primary);
+  margin-bottom: 4rem;
   letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .projects-container h1 span {
-  color: #C1440E;
-  font-weight: 500;
+  color: var(--red);
+  font-weight: 400;
 }
 
-.projects-grid {
+.projects-list {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project-row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 80px 1fr auto;
   gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: padding-left 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.project-card {
-  background: #1a1a1a;
-  border: 1px solid #222;
-  padding: 2rem;
-  transition: border-color 0.3s;
+.project-row:hover {
+  padding-left: 1rem;
 }
 
-.project-card:hover {
-  border-color: #C1440E;
+.project-row:hover .project-num {
+  color: var(--red);
 }
 
-.project-card h3 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: white;
-  margin-bottom: 1rem;
+.project-row:hover .project-arrow {
+  color: var(--red);
+  transform: translate(4px, -4px);
 }
 
-.project-card p {
-  color: #888;
+.project-num {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-ghost);
+  transition: color 0.3s;
+}
+
+.project-body h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.project-body p {
+  font-size: 13px;
+  color: var(--text-dim);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
 }
 
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .tech-badge {
-  padding: 4px 12px;
-  border: 1px solid #C1440E;
-  color: #C1440E;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  border: 1px solid #2a1510;
+  padding: 3px 10px;
 }
 
-.project-link {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: color 0.3s;
+.project-arrow {
+  font-size: 1.2rem;
+  color: var(--text-ghost);
+  transition: all 0.3s;
 }
 
-.project-link:hover {
-  color: #C1440E;
+.section-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--red);
+  flex-shrink: 0;
 }

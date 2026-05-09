@@ -5,25 +5,33 @@ const About = () => {
   return (
     <div className="about">
       <div className="about-container">
-        <div className="about-text">
-          <h1>À propos de <span>moi</span></h1>
-          <p>Je suis un développeur web passionné par la création d'expériences digitales modernes et élégantes.</p>
-          <p>J'aime travailler avec les dernières technologies comme React, Node.js et Three.js pour créer des applications web uniques.</p>
-          <div className="about-info">
-            <div className="info-item">
-              <span className="label">Nom</span>
-              <span className="value">Macbook</span>
-            </div>
-            <div className="info-item">
-              <span className="label">Email</span>
-              <span className="value">ton@email.com</span>
-            </div>
-            <div className="info-item">
-              <span className="label">Localisation</span>
-              <span className="value">France</span>
-            </div>
+        <div className="about-grid">
+          <div className="about-visual">
+            <span className="about-visual-monogram">H:B</span>
           </div>
-          <a href="/projects" className="btn-about">Voir mes projets</a>
+          <div className="about-text-side">
+            <div className="section-label">Who am I</div>
+            <h1>About<br /><span>me</span></h1>
+            <div className="about-text">
+              <p>I am an IT Technician passionate about technology and artificial intelligence. I aim to understand and create AI-driven content while continuing to grow as a web developer.</p>
+              <p>I enjoy building modern web applications and exploring the possibilities that AI offers for the future of development.</p>
+            </div>
+            <div className="about-info">
+              <div className="info-item">
+                <span className="label">Name</span>
+                <span className="value">Hamid Bouaicha</span>
+              </div>
+              <div className="info-item">
+                <span className="label">Email</span>
+                <span className="value">hbo711772@gmail.com</span>
+              </div>
+              <div className="info-item">
+                <span className="label">Location</span>
+                <span className="value">Orleans, France</span>
+              </div>
+            </div>
+            <a href="/projects" className="btn-about">View my projects</a>
+          </div>
         </div>
       </div>
     </div>

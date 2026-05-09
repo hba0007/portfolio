@@ -1,0 +1,22 @@
+:root {
+  --red: #C1440E;
+  --bg: #0a0a0a;
+  --bg-alt: #080808;
+  --border: #1e1e1e;
+  --border-subtle: #141414;
+  --text-primary: #ffffff;
+  --text-muted: #666666;
+  --text-dim: #555555;
+  --text-ghost: #333333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0a0a;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
